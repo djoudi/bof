@@ -44,6 +44,8 @@
        <link rel="stylesheet" type="text/css" href="{!! secure_asset('app-assets/css-rtl/custom-rtl.css') !!}">
        <link rel="stylesheet" type="text/css" href="{!! secure_asset('assets/css/style-rtl.css') !!}">
        <!-- END: Custom CSS-->
+       <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.10.3/dist/cdn.min.js" defer></script>
+
        @stack('custom-css')
 
 </head>
@@ -72,10 +74,15 @@
                     <li class="nav-item"><a class="nav-link menu-toggle" href="#"><i class="ficon" data-feather="menu"></i></a></li>
                 </ul>
                 <ul class="nav navbar-nav bookmark-icons pr-3">
-                   <h3>الجمهورية الجزائرية الديمقراطية الشعبية *** </h3>
+                    <img  class="img-fluid" style="width: 4%" src="{!! secure_asset('logo_minister.svg') !!}" alt="MICLAT" />
+
+                   <h3 class="mx-2 text-success">الجمهورية الجزائرية الديمقراطية الشعبية 
+                    
+                </h3>
+                                    <h4 class="text-success me-1">وزارة الداخلية والجماعات المحلية والتهيئة العمرانية</h4>
+
                 </ul>
                 <ul class="nav navbar-nav">
-                    <h4>وزارة الداخلية والجماعات المحلية والتهيئة العمرانية</h4>
                 </ul>
             </div>
             <ul class="nav navbar-nav align-items-center ms-auto">
@@ -83,7 +90,7 @@
                 <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-style"><i class="ficon" data-feather="moon"></i></a></li>
              
                 <li class="nav-item dropdown dropdown-user"><a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="user-nav d-sm-flex d-none"><span class="user-name fw-bolder">{{ Auth::user()->name }}</span></div><span class="avatar"><img class="round" src="{!! secure_asset('app-assets//images/portrait/small/avatar-s-11.jpg') !!}" alt="avatar" height="40" width="40"><span class="avatar-status-online"></span></span>
+                        {{-- <div class="user-nav d-sm-flex d-none"><span class="user-name fw-bolder">{{ Auth::user()->name }}</span></div><span class="avatar"><img class="round" src="{!! secure_asset('app-assets//images/portrait/small/avatar-s-11.jpg') !!}" alt="avatar" height="40" width="40"><span class="avatar-status-online"></span></span> --}}
                     </a>
                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-user">
                         <a class="dropdown-item" href="#"><i class="me-50" data-feather="user"></i> الملف الشخصي</a>
@@ -109,6 +116,7 @@
 
 
     <!-- BEGIN: Main Menu-->
+    @hasrole('Admin')
     <div class="horizontal-menu-wrapper">
         <div class="header-navbar navbar-expand-sm navbar navbar-horizontal floating-nav navbar-light navbar-shadow menu-border container-xxl" role="navigation" data-menu="menu-wrapper" data-menu-type="floating-nav">
             <div class="navbar-header">
@@ -144,7 +152,7 @@
             </div>
             <div class="shadow-bottom"></div>
             <!-- Horizontal menu content-->
-            @hasrole('Admin')
+         
             <div class="navbar-container main-menu-content" data-menu="menu-container">
                 <!-- include ../../../includes/mixins-->
                 <ul class="nav navbar-nav" id="main-menu-navigation" data-menu="menu-navigation">
@@ -169,15 +177,16 @@
                 </ul>
 
             </div>
-            @endhasrole
+           
         </div>
     </div>
+    @endhasrole
     <!-- END: Main Menu-->
 
     <!-- BEGIN: Content-->
     <div class="app-content content ">
         <div class="content-overlay"></div>
-        <div class="header-navbar-shadow"></div>
+        {{-- <div class="header-navbar-shadow"></div> --}}
         <div class="content-wrapper container-xxl p-0">
             @yield('content')
            {{--  <div class="content-header row">

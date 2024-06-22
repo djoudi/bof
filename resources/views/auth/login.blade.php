@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h2 class="card-title fw-bold mb-1">مرحبا بكم في منصة التقييمات 👋</h2>
+<h2 class="card-title text-danger fw-bold mb-1">حصيلة عمليات التكوين </h2>
 <form class="auth-login-form mt-2" method="POST" action="{{ route('login') }}">
     @csrf
     <div class="mb-1">

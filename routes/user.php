@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\User\EvaluationController;
+use App\Http\Controllers\User\BilanController;
 use App\Http\Controllers\User\HomeController;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -19,8 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['role:User', 'auth']], function () {
 Route::get('/',  [HomeController::class, 'index'])->name('user.home');
 Route::view('profile', 'profile')->name('profile');
-Route::get('/home', [EvaluationController::class, 'create'])->name('home.create');
-Route::post('/evaluation/store', [EvaluationController::class, 'store'])->name('evaluation.store');
-Route::get('/get-communes/{wilaya}', [EvaluationController::class, 'getCommunes']);
+Route::get('/home', [BilanController::class, 'create'])->name('home.create');
+Route::post('/bilan/store', [BilanController::class, 'store'])->name('bilan.store');
+Route::get('/get-communes/{wilaya}', [BilanController::class, 'getCommunes']);
 
 });

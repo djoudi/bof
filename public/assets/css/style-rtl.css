@@ -7,3 +7,11 @@ body,.header-navbar{
 .brand-logo{
     display: flex !important;
 }
+
+.brand-text{
+    font-size: 2rem;
+}
+
+.brand-text2{
+    font-size: 1.5rem;
+}

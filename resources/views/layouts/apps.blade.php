@@ -68,11 +68,11 @@
                         <!-- /Brand logo-->
                         <!-- Left Text-->
                         <div class="d-none d-lg-flex flex-column col-lg-8 align-items-center p-5">
-                            <h2 class="brand-text text-primary ms-1">
+                            <h2 class="brand-text text-success ms-1 mb-2">
                                 وزارة الداخلية والجماعات المحلية والتهيئة العمرانية
   
                                 </h2> 
-                              <h3 class="brand-text text-primary ms-1"> 
+                              <h3 class="brand-text2 text-success ms-1 mb-4"> 
                                   المديرية العامة للموارد البشرية و التكوين و القوانين الأساسية
                               </h3>
                             <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img
