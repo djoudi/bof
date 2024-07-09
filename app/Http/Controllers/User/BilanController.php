@@ -61,6 +61,10 @@ class BilanController extends Controller
        // $validatedData['observations'] = 
        // dd($validatedData);
         // Save the evaluation
+         // Ensure commune_id is null if not provided
+    if (empty($validatedData['commune_id']) || !is_numeric($validatedData['commune_id'])) {
+        $data['commune_id'] = null;
+    }
         $evaluation = Bilan::create($validatedData);
         flash()
     ->translate('ar')

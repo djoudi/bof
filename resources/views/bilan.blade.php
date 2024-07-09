@@ -2,9 +2,8 @@
 
 @section('content')
   <div class="content-header row">
-                <h2 class="text-center text-danger mb-2">حصيلة عمليات التكوين المبادر بها من طرف الولاية والبلديات التابعة لها الخاصة بالسداسيين الأول و
-                    الثاني لسنة 2023                     </h2>
-            
+                <h2 class="text-center text-danger mb-2">
+                    حصيلة عمليات التكوين بالسداسي الأول  لسنة 2024                     </h2>
             </div>
             <div class="content-body">
                 <div class="row">
@@ -210,7 +209,7 @@
     
                         // Clear existing options
                         var communeSelect = document.getElementById('commune');
-                        communeSelect.innerHTML = '<option value="0">اختيار البلدية</option>';
+                        communeSelect.innerHTML = '<option>اختيار البلدية</option>';
     
                         // Populate the commune dropdown with the new options
                         communes.forEach(function (commune) {
