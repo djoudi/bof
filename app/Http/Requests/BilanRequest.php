@@ -24,19 +24,20 @@ class BilanRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'wilaya_id' => 'nullable|integer',
-            'commune_id' => 'nullable|integer',
-            'center_id' => 'nullable|integer',
-            'grade_id' => 'nullable|integer',
-            'date_fromation' => 'nullable|string',
-            'type_formation' => 'nullable|string',
-            'duree' => 'nullable|string',
-            'num_total' => 'nullable|integer',
-            'num_male' => 'nullable|integer',
-            'num_fmale' => 'nullable|integer',
-            'responsables_formation' => 'nullable|string',
-            'observations' => 'nullable|string',
-            'formation' => 'nullable|string',
+            'wilaya_id' => 'nullable',
+            'commune_id' => 'nullable',
+            'center_id' => 'nullable',
+            'grade_id' => 'nullable',
+            'date_fromation' => 'nullable',
+            'type_formation' => 'nullable',
+            'duree' => 'string',
+            'num_total' => 'string',
+            'num_male' => 'string',
+            'num_fmale' => 'string',
+            'responsables_formation' => 'string',
+            'observations' => 'string',
+            'formation' => 'string',
+            'duree' => 'string',
         ];
     }
 }

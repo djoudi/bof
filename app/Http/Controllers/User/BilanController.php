@@ -59,17 +59,18 @@ class BilanController extends Controller
     {
         $validatedData = $request->validated();
        // $validatedData['observations'] = 
-       // dd($validatedData);
+   
         // Save the evaluation
          // Ensure commune_id is null if not provided
     if (empty($validatedData['commune_id']) || !is_numeric($validatedData['commune_id'])) {
-        $data['commune_id'] = null;
+        $validatedData['commune_id'] = null;
     }
         $evaluation = Bilan::create($validatedData);
+       // dd( $evaluation);
         flash()
     ->translate('ar')
     ->addSuccess('تمت العملية بنجاح.', 'تهانينا!');
         // Optionally, you can redirect or add a success message
-        return back()->withInput();
+       return back()->withInput();
     }
 }
